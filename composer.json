@@ -1,0 +1,32 @@
+{
+    "name": "thtmorais/yii2-pace",
+    "description": " PACE (Progress Automatically Certain to Entertain) - Automatic page load progress bar for Yii PHP Framework",
+    "type": "yii2-extension",
+    "keywords": ["yii2","PACE","loading","load","load progress","progress"],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/thtmorais/yii2-pace/issues",
+        "source": "https://github.com/thtmorais/yii2-pace"
+    },
+    "authors": [
+        {
+            "name": "Matheus Evangelista Morais",
+            "email": "thtmorais@hotmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0",
+        "@npm-asset/pace-js": "1.0.2",
+        "ext-json": "*"
+    },
+    "config": {
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "thtmorais\\pace\\": ""
+        }
+    }
+}
