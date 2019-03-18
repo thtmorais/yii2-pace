@@ -16,7 +16,7 @@
     ],
     "require": {
         "yiisoft/yii2": "~2.0.0",
-        "@npm-asset/pace-js": "1.0.2",
+        "npm-asset/pace-js": "1.0.2",
         "ext-json": "*"
     },
     "config": {
