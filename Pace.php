@@ -40,11 +40,13 @@ class Pace extends Widget
         }elseif ($this->color === null){
             $this->color = 'blue';
         }
+
         if(isset(Yii::$app->params['paceOptions']['theme']) && !empty(Yii::$app->params['paceOptions']['theme']) && $this->theme === null) {
             $this->theme = Yii::$app->params['paceOptions']['theme'];
-        }elseif ($this->color === null){
+        }elseif ($this->theme === null){
             $this->theme = 'minimal';
         }
+
         if(isset(Yii::$app->params['paceOptions']['options']) && !empty(Yii::$app->params['paceOptions']['options']) && $this->options === null) {
             $this->getView()->registerJs('window.paceOptions=' . json_encode(Yii::$app->params['paceOptions']['options']), \yii\web\View::POS_BEGIN);
         }
