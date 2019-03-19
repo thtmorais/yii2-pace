@@ -10,7 +10,7 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer require --prefer-dist thtmorais/yii2-pace "*"
+composer require thtmorais/yii2-pace "*"
 ```
 
 or add
@@ -28,4 +28,56 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \thtmorais\pace\AutoloadExample::widget(); ?>```
+<?php
+
+use thtmorais\pace\Pace;
+
+echo Pace::widget();
+
+?>
+```
+
+or
+
+```php
+<?= \thtmorais\pace\Pace::widget() ?>
+```
+
+We recommend using in the `layouts/main.php` file. Or if you prefer in each view file with their respective settings.
+
+Configuration
+-------------
+
+By default the PACE comes configured with blue color and animation minimal.
+
+You can add general rule for all views in the `config/params.php` file as follows:
+
+```php
+<?php
+    return [
+        'paceOptions' => [
+            'color' =>  'blue',
+            'theme' => 'minimal',
+            'options' => []
+        ]
+    ];
+?>
+```
+
+or individually in each view: 
+
+```php
+<?php
+   
+use thtmorais\pace\Pace;
+
+echo Pace::widget([
+    'color'=>'red',
+    'theme'=>'corner-indicator',
+    'options'=>[]
+]);
+
+?>
+```
+
+You can preview **themes** and **colors** [here](http://github.hubspot.com/pace/docs/welcome/).

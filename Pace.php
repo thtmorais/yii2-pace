@@ -17,8 +17,8 @@ use yii\base\Widget;
  */
 class Pace extends Widget
 {
-    public $color = 'blue';
-    public $theme = 'minimal';
+    public $color;
+    public $theme;
     public $options;
 
     /**
@@ -35,8 +35,18 @@ class Pace extends Widget
      */
     public function run()
     {
-        if(!empty($this->options)){
-            $this->getView()->registerJs('window.paceOptions='.json_encode($this->options),\yii\web\View::POS_BEGIN);
+        if(isset(Yii::$app->params['paceOptions']['color']) && !empty(Yii::$app->params['paceOptions']['color']) && $this->color === null) {
+            $this->color = Yii::$app->params['paceOptions']['color'];
+        }elseif ($this->color === null){
+            $this->color = 'blue';
+        }
+        if(isset(Yii::$app->params['paceOptions']['theme']) && !empty(Yii::$app->params['paceOptions']['theme']) && $this->theme === null) {
+            $this->theme = Yii::$app->params['paceOptions']['theme'];
+        }elseif ($this->color === null){
+            $this->theme = 'minimal';
+        }
+        if(isset(Yii::$app->params['paceOptions']['options']) && !empty(Yii::$app->params['paceOptions']['options']) && $this->options === null) {
+            $this->getView()->registerJs('window.paceOptions=' . json_encode(Yii::$app->params['paceOptions']['options']), \yii\web\View::POS_BEGIN);
         }
 
         PaceAsset::register($this->getView());
