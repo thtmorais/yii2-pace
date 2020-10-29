@@ -53,7 +53,7 @@ class Pace extends Widget
         }
 
         if(ArrayHelper::keyExists('theme',$paceOptions) && ArrayHelper::getValue($paceOptions,'theme') != '' && ArrayHelper::getValue($paceOptions,'theme') != null && $this->theme === null) {
-            $this->theme = rrayHelper::getValue($paceOptions,'theme');
+            $this->theme = ArrayHelper::getValue($paceOptions,'theme');
         }elseif ($this->theme === null){
             $this->theme = 'minimal';
         }
