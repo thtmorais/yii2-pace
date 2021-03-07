@@ -16,6 +16,8 @@ class PaceAsset extends AssetBundle
 
     private $path = "pace-js/";
 
+    public $jsOptions = ['position' => \yii\web\View::POS_HEAD];
+
     public function registerAssetFiles($view)
     {
         if(YII_DEBUG){
