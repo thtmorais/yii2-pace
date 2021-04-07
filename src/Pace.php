@@ -17,17 +17,19 @@ class Pace extends Widget
      * @var string
      */
     public $color;
+    
     /**
      * @var string
      */
     public $theme;
+
     /**
      * @var array
      */
     public $options;
 
     /**
-     * 
+     * {@inheritDoc}
      */
     public function init()
     {
