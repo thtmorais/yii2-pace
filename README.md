@@ -80,4 +80,4 @@ echo Pace::widget([
 ?>
 ```
 
-You can preview **themes** and **colors** [here](http://github.hubspot.com/pace/docs/welcome/).
+You can preview **themes** and **colors** [here](https://codebyzach.github.io/pace/).
