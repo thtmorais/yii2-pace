@@ -4,8 +4,8 @@ namespace thtmorais\pace;
 
 use Yii;
 use yii\base\Widget;
-use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
+use yii\helpers\ArrayHelper;
 
 /**
  * Class Pace
@@ -17,7 +17,7 @@ class Pace extends Widget
      * @var string
      */
     public $color;
-    
+
     /**
      * @var string
      */

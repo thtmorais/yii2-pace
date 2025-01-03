@@ -2,6 +2,7 @@
 
 namespace thtmorais\pace;
 
+use yii\web\View;
 use yii\web\AssetBundle;
 
 /**
@@ -14,9 +15,9 @@ class PaceAsset extends AssetBundle
      * @var string
      */
     public $sourcePath = "@npm/pace-js/";
-    
+
     /**
-     * @var string[]
+     * @var array
      */
     public $js = [
         YII_DEBUG ? 'pace.js' : 'pace.min.js'
@@ -26,6 +27,6 @@ class PaceAsset extends AssetBundle
      * @var array
      */
     public $jsOptions = [
-        'position' => \yii\web\View::POS_HEAD
+        'position' => View::POS_HEAD
     ];
 }
