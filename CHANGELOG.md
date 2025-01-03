@@ -1,7 +1,5 @@
 ﻿#CHANGELOG(Registro de alterações)
 
-###[1.2.4-b] - Refactoring ([@thtmorais](https://gitlab.com/thtmorais))
-
 ###[1.2.4] - Refactoring ([@thtmorais](https://gitlab.com/thtmorais))
 
 ###[1.0.1] - Adjustments ([@thtmorais](https://gitlab.com/thtmorais))
